@@ -1,8 +1,8 @@
-
 /* 
+ * File:   main.cpp
  * Author: Kayla Rodriguez
- * Created on January 6, 2016, 9:38 AM
- * Purpose: Quarters, Nickels, Dimes
+ * Created on January 6, 2016, 9:26 AM
+ * Purpose: Energy Drink Survey
  */
 
 //System Libraries
@@ -11,35 +11,31 @@ using namespace std;
 
 //User Libraries
 
-//Global Constant
-const char cnvQrtr=25;//Cents per quarter
-const char cnvDime=10;//Cents per dime
-const char cnvNikl=5;//Cents per nickel
-const char cnvPnDl=100;//Conversion from pennies to dollars
+//Global Constants
+const char cnvPerc=100;//Conversion to percentage
+
 //Function Prototypes
 
 //Execution Begins Here
 int main(int argc, char** argv) {
     //Declare and initialize variables
-    unsigned char nQrtrs,nNikls,nDimes;//Declare inputs, number of Q,D,N
-    unsigned short total;//total
+    unsigned short cstSrvy=16500; //Customers Surveyed
+    unsigned char  peDrnk=15; //Percentage Surveyed of energy drinkers
+    unsigned char  pcDrnk=58; //Percentage Surveyed of energy citrus drinkers
+    unsigned short neDrnk,ncDrnk; //Number of energy and citrus energy drinkers
     
-    //Input the number of coins 
-    cout<<"How many quarters do you have 0-9"<<endl;
-    cin>>nQrtrs;
-    cout<<"How many dimes doy ou have 0-9"<<endl;
-    cin>>nDimes;
-    cout<<"How many nickels do you have 0-9"<<endl;
-    cin>>nNikls;
+    //Calculate the number of drinkers 
+    neDrnk=(cstSrvy*peDrnk)/(cnvPerc);  
+    ncDrnk=(neDrnk*pcDrnk)/(cnvPerc); //Number of Energy Citrus drinkers
     
-    //Calculate the total
-    total=(nQrtrs-48)*cnvQrtr+(nDimes-48)*cnvDime+(nNikls-48)*cnvNikl;
     //Output the results
-    cout<<"Number of Quarters input = "<<nQrtrs<<endl;
-    cout<<"Number of Dimes    input = "<<nDimes<<endl;
-    cout<<"Number of Nickels  input = "<<nNikls<<endl;
-    cout<<"The dollar amount = $"<<1.0f*total/cnvPnDl<<endl;
+    cout<<"Number of Customers Surveyed = "        <<cstSrvy<<endl;
+    cout<<"Percentage of Energy Drinkers = "        <<static_cast<int>(peDrnk)<<"%"<<endl;
+    cout<<"Percentage of Energy Citrus Drinkers = " <<static_cast<int>(pcDrnk)<<"%"<<endl;
+    cout<<"Number of Energy Drinkers = "            <<neDrnk<<endl;
+    cout<<"Number of Energy Citrus Drinkers = "     <<ncDrnk<<endl;
     
     //Exit stage right
     return 0;
 }
+
