@@ -92,8 +92,21 @@ int main(int argc, char** argv) {
     cout<<(!(x||y)?'T':'F')<<"       ";
     cout<<(!x&&!y?'T':'F')<<"     "<<endl;
     
+    x=1,y=0;
+    cout<<"Before Swap"<<endl;
+    cout<<"x:"<<x<<endl;
+    cout<<"y:"<<y<<endl;
     
     //Swap Using Temp
+    bool temp=x;
+    x=y;
+    y=temp;
+    
+    //Output
+    cout<<"After Swap"<<endl;
+    cout<<"x:"<<x<<endl;
+    cout<<"y:"<<y<<endl;
+            
     
     //Swap using exclusive or operator 
    
