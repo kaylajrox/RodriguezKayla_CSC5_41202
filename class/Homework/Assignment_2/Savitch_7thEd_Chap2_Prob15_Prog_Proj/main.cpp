@@ -1,7 +1,7 @@
 /* 
  * Author: Kayla Rodriguez
  * Created on January 5, 2016, 9:20 PM
- * Purpose: Workweek for an Employee
+ * Purpose: Velocity of sound in different temperatures
  */
  
 //System Libraries
