@@ -6,6 +6,7 @@
  
 //System Libraries
 #include <iostream>
+#include <iomanip>
 using namespace std;
  
 //User Libraries
@@ -24,13 +25,13 @@ int main(int argc, char** argv) {
     unsigned int nHrs;     //Number of hours worked per week
     unsigned int nDep;     //Number of dependents 
     float taxTl;           //amount of total taxes being applied
-    float totPayN; //total net pay
-    float totPayG; //total gross pay
-    float hrPay=16.78f;     //Pay per hour
-    float amtTook;   //amount of money taken out from taxes
-    float aTookSS;   //amount taken from paycheck by social security
-    float aTookFT;   //amount taken from paycheck by federal income tax
-    float aTookST;   //amount taken from paycheck by state income tax
+    float totPayN;         //total net pay
+    float totPayG;         //total gross pay
+    float hrPay=16.78f;    //Pay per hour
+    float amtTook;         //amount of money taken out from taxes
+    float aTookSS;         //amount taken from paycheck by social security
+    float aTookFT;         //amount taken from paycheck by federal income tax
+    float aTookST;         //amount taken from paycheck by state income tax
     char choice;
     do {
         //Input
@@ -50,7 +51,7 @@ int main(int argc, char** argv) {
 
 
         //Output
-
+        cout<<fixed<<setprecision(2);
         cout<<"Your Gross pay is "<<totPayG<<"$"<<endl;
         cout<<"The amount of total taxes in place: "<<taxTl*CNVPERC<<" %"<<endl;
         cout<<"The amount of money from paycheck by total taxes in place is "<<amtTook;
