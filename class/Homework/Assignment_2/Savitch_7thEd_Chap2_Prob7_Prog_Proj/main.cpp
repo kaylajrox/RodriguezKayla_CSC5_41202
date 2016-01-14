@@ -27,7 +27,7 @@ int main(int argc, char** argv) {
     float taxTl;           //amount of total taxes being applied
     float totPayN;         //total net pay
     float totPayG;         //total gross pay
-    float hrPay=16.78f;    //Pay per hour
+    float HRPAY=16.78f;    //Pay per hour
     float amtTook;         //amount of money taken out from taxes
     float aTookSS;         //amount taken from paycheck by social security
     float aTookFT;         //amount taken from paycheck by federal income tax
@@ -41,7 +41,7 @@ int main(int argc, char** argv) {
         cin>>nDep;
 
         //Calculate
-        totPayG=nHrs*hrPay;
+        totPayG=nHrs*HRPAY;
         taxTl=sSocTax+fedInTax+stInTax;
         amtTook=taxTl*totPayG;
         totPayN=totPayG-amtTook-10;
