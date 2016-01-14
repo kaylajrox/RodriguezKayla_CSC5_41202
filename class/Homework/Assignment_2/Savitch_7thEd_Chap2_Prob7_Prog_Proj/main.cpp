@@ -52,23 +52,19 @@ int main(int argc, char** argv) {
 
         //Output
         cout<<fixed<<setprecision(2);
-        cout<<"Your Gross pay is "<<totPayG<<"$"<<endl;
+        cout<<"Your Gross pay is "<<"$"<<totPayG<<endl;
         cout<<"The amount of total taxes in place: "<<taxTl*CNVPERC<<" %"<<endl;
-        cout<<"The amount of money from paycheck by total taxes in place is "<<amtTook;
-        cout<<"$"<<endl;
-        cout<<"The amount of money from paycheck used for social security is "<<aTookSS;
-        cout<<"$"<<endl;
-        cout<<"The amount of money from paycheck used for federal income tax is "<<aTookFT;
-        cout<<"$"<<endl;
-        cout<<"The amount of money from paycheck used for state income tax is "<<aTookST;
-        cout<<"$"<<endl;
+        cout<<"The amount of money from paycheck by total taxes in place is "<<"$"<<amtTook<<endl;
+        cout<<"The amount of money from paycheck used for social security is "<<"$"<<aTookSS<<endl;
+        cout<<"The amount of money from paycheck used for federal income tax is "<<"$"<<aTookFT<<endl;
+        cout<<"The amount of money from paycheck used for state income tax is "<<"$"<<aTookST<<endl;
         if (nDep >= 3)
         {
-            cout<<"Your net pay is "<<totPayN-35<<"$"<<endl;       
+            cout<<"Your net pay is "<<"$"<<totPayN-35<<endl;       
         }    
         else
         {    
-            cout<<"Your net pay is "<<totPayN<<"$"<<endl;
+            cout<<"Your net pay is "<<"$"<<totPayN<<endl;
         }
         cout<<"Would you like to repeat the program? "<<endl;
         cout<<"y=yes anything else to exit"<<endl;
