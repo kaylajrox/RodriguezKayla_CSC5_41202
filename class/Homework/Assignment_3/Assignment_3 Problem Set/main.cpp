@@ -6,6 +6,7 @@
 //System Libraries
 #include <iostream>
 #include <iomanip>
+#include <cmath>
 using namespace std;
  
 //User Libraries
@@ -25,7 +26,7 @@ int main(int argc, char** argv) {
             //Input problem to display, i.e. Menu
             cout<<"Assignment 3 Problem Set"<<endl;
             cout<<"Type 1 to Display Savitch 8thEd Chap3 Prob10"<<endl;
-            cout<<"Type 2 to Display Problem 2"<<endl;
+            cout<<"Type 2 to Display Savitch 8thEd Chap3 Prob11"<<endl;
             cout<<"Type 3 to Display Problem 3"<<endl;
             cout<<"Type anything else to exit "<<endl;
             cin>>nSoltn;
@@ -69,7 +70,33 @@ int main(int argc, char** argv) {
                     break;
                 }
                 case 2:{
-                    cout<<endl<<"Solution to Problem 2"<<endl<<endl;
+                    //Declare and initialize variables
+                    const unsigned char nTerms=13;
+                    float etox=1,x;//e^x
+
+                    //Input the value x
+                    cout<<"Input x of e^x computation"<<endl;
+                    cin>>x;
+
+                    //Calculate e^x
+                    for(int n=1;n<=nTerms;n++){
+                        //Declare and Initialize variables
+                        unsigned int factN=1;//N and N
+
+                        //Calculate the factorial
+                        for(int i=1;i<=n;i++){
+                            factN*=i;   
+                        }
+
+                        //Calculate e^x with the above factorial
+                        etox+=pow(x,n)/factN;
+                    }
+
+                    //Output
+                    cout<<"The exact value of e^"<<x<<"="<<exp(x)<<endl;
+                    cout<<"The approx value of e^"<<x<<"="<<etox<<endl<<endl;
+
+
                     break;
                 }
                 case 3:{
