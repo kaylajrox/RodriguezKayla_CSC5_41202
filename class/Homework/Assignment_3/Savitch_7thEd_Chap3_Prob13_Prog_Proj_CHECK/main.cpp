@@ -1,6 +1,6 @@
  /* Author: Kayla Rodriguez
- * Created on January 20, 2016, 8:55 AM
- * Purpose: Play Paper-Rock-Scissors with the computer
+ * Created on January 20, 2016, 8:55 PM
+ * Purpose: Monty Hall Game Show
  */
  
 //System Libraries
@@ -61,12 +61,12 @@ int main(int argc, char** argv) {
             pick2=toupper(pick2);
         }while(!(pick2=='A'||pick2=='B'||pick2=='C'));
     }else if (choice=='n')
-    {
-        cout<<"This is your pick: ";
-        cout<<pick1<<endl;
-        pick1=pick3;
+    {  do{ 
+        cout<<"This is your pick: "<<pick1<<endl;
+        cout<<"Please retype your choice: ";
+        cin>>pick3;
         pick3=toupper(pick3);
-
+    }while(!(pick3=='A'||pick3=='B'||pick3=='C'));
         cout<<"You have kept your choice, and ";
     }else
         do{
@@ -80,11 +80,11 @@ int main(int argc, char** argv) {
            pickC2=rand()%3+65;     
         }while(pickC2==pickC1);
         cout<<"the winning door was "<<pickC2<<"."<<endl;
-        if (pick2==pickC2)
+        
+        if (pickC2==pick2||pickC2==pick3)
+        {
             cout<<"You win the car!"<<endl;
-        else if (pick3==pickC2)
-            cout<<"You win the car!"<<endl;
-        else
+        }else
             cout<<"You did not win the car, and you receive a consolation prize."<<endl<<endl;
 
    //Analysis of Outcome
@@ -96,7 +96,7 @@ int main(int argc, char** argv) {
         cout<<"approximately a 67% chance of picking the wrong choice initially."<<endl;
         cout<<"So, it would be better to switch your answer because the one you"<<endl;
         cout<<"already picked is";
-        cout<<"most likely wrong."<<endl;
+        cout<<" most likely wrong."<<endl;
     //Exit stage right
     return 0;
 }
