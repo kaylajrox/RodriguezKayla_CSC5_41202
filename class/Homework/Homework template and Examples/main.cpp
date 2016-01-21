@@ -29,7 +29,7 @@ int main(int argc, char** argv) {
 
         //Output
 
-        c
+
         cout<<"Would you like to repeat the program? "<<endl;
         cout<<"y=yes anything else to exit"<<endl;
         cin>>choice;
