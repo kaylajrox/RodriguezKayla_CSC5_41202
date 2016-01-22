@@ -43,6 +43,9 @@ int main(int argc, char** argv) {
             //Solutions to all the problems
             switch (nSoltn){
                 case 1:{
+                cout<<endl<<"Solution to Savitch 8thEd Chap3 Prob10 "<<endl;
+                cout<<"Green Crud Population and Fibbonacci Sequence "<<endl<<endl;
+                    
                 //Declare Variables
                     unsigned int fi,fim1,fim2;//Designations in the sequence
                     unsigned short nTerms;    //Number of terms in the sequence
@@ -80,6 +83,9 @@ int main(int argc, char** argv) {
                     break;
                 }
                 case 2:{
+                    cout<<endl<<"Solution to Savitch 8thEd Chap3 Prob11 "<<endl;
+                    cout<<"e^x Calculation"<<endl<<endl;
+                    
                     //Declare and initialize variables
                     const unsigned char nTerms=13;
                     float etox=1,x;//e^x
@@ -110,7 +116,8 @@ int main(int argc, char** argv) {
                     break;
                 }
                 case 3:{
-                    cout<<endl<<"Solution to Savitch 7thEd Chap3 Prob2 "<<endl<<endl;
+                    cout<<endl<<"Solution to Savitch 7thEd Chap3 Prob2 "<<endl;
+                    cout<<"Revolving Credit"<<endl<<endl;
                     
                     //Declare and initialize variables
                     float accBal;
@@ -177,16 +184,14 @@ int main(int argc, char** argv) {
                     float c;      //constant in function
                     float root1;  //root 1 in real 
                     float root2;  //root 2 in imaginary 
-                    float detmin; //determinant
-                    float root1C; //first complex root
-                    float root2C; //second complex root
+                    float detmin; //determinant  
                     float detminC;//complex determinant 
                     char choice;
                     do {
                         //Input data
                         cout<<"Given the formula ax^2+bx+c=0, we want to know the roots of ";
                         cout<<"a quadratic equation given in that form."<<endl;
-                        cout<<"Please input a value "<<endl;
+                        cout<<"Please input the coefficient a value "<<endl;
                         cin>>a;
                         cout<<"Please input b value "<<endl;
                         cin>>b;
@@ -198,11 +203,12 @@ int main(int argc, char** argv) {
                         root2=(-b-sqrt(pow(b,2)-4*a*c))/(2*a);
                         detmin=(pow(b,2))-4*a*c;
                         detminC=-((pow(b,2))-4*a*c);
-                        root1C=(-b+sqrt(detminC))/(2*a);
-                        root2C=(-b-sqrt(detminC))/(2*a);
-
+                        
                         //Output outcomes
-                        if (detmin==0){
+                        if (a==0){
+                            cout<<"undefined"<<endl;
+                        }
+                        else if (detmin==0){
                             cout<<"There is one real root and the root is ";
                             cout<<root1<<endl<<endl;
                         }else if (detmin>0){
@@ -230,26 +236,27 @@ int main(int argc, char** argv) {
                     cout<<"Bouyancy"<<endl<<endl;
                     
                     //Declare and initialize variables
-                    float Fb; //buoyant force
-                    float v;  //volume
-                    float y;  //specific weight of the of the object
-                    float r; //radius
+                    float Fb;       //buoyant force
+                    float v;        //volume
+                    float Y=62.4f;  //specific weight of the of the object
+                    float r;        //radius
+                    float wgt;     //weight of object
 
                     //Input data
-                    cout<<"This program tells you whether a spheric object will sink or float."<<endl;
+                    cout<<"This program tells you whether a spherical object will sink or float."<<endl;
                     cout<<"Please input the weight of the object in lbs."<<endl;
-                    cin>>y;
+                    cin>>wgt;
                     cout<<"Please input the radius of the sphere in ft."<<endl;
                     cin>>r;
 
                     //Calculation
                     v=4/3*PI*pow(r,3);
-                    Fb=v*y;
+                    Fb=v*Y;
 
                     //Output
-                    cout<<"The volume is "<<v<<endl;
-                    cout<<"The bouyant force is "<<Fb<<endl;
-                    if (Fb>=y)
+                    cout<<"The volume is "<<v<<"ft^3"<<endl;
+                    cout<<"The bouyant force is "<<Fb<<"lbs"<<endl;
+                    if (Fb>=wgt)
                         cout<<"The sphere will float. "<<endl<<endl;
                     else 
                         cout<<"The sphere will sink."<<endl<<endl;
@@ -276,9 +283,9 @@ int main(int argc, char** argv) {
                     break;
                 }
                 case 7:{
-                     //The Problem to solve
+                    //The Problem to solve
                     cout<<endl<<"Solution to Savitch 7thEd Chap3 Prob1"<<endl;
-                    cout<<endl<<"The Rock-Paper-Scissors Games"<<endl<<endl;
+                    cout<<endl<<"Rock-Paper-Scissors Games"<<endl<<endl;
 
                    //Set the random number seed
                     srand(static_cast<unsigned int>(time(0)));
