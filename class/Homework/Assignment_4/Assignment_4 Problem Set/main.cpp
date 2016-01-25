@@ -33,7 +33,7 @@ int main(int argc, char** argv) {
             cout<<"Type 3 to Display Savitch 7thEd Chap4 Prob7 "<<endl;
             cout<<"Type 4 to Display Savitch 7thEd Chap4 Prob1 "<<endl;
             cout<<"Type 5 to Display Savitch 7thEd Chap4 Prob2 "<<endl;
-            cout<<"Type 6 to Display Savitch 7thEd Chap3 Prob16 "<<endl;
+            cout<<"Type 6 to Display Gaddis 8thEd Chap5 Prob1 "<<endl;
             cout<<"Type 7 to Display Savitch 7thEd Chap3 Prob1 "<<endl;
             cout<<"Type 8 to Display Savitch 7thEd Chap3 Prob5 "<<endl;
             cout<<"Type 9 to Display Savitch 9thEd Chap3 Prob3 "<<endl;
@@ -223,9 +223,22 @@ int main(int argc, char** argv) {
                     break;
                 }
                 case 6:{
-                cout<<endl<<"Solution to Savitch 7thEd Chap3 Prob16 "<<endl;
-                cout<<"Equal Temperatures"<<endl<<endl;
-                
+                   //The problem to solve
+                cout<<endl<<"Solution to Gaddis 8thEd Chap5 Prob1"<<endl;
+                cout<<endl<<"Positive Integers"<<endl<<endl;
+
+                //Declare variables
+                unsigned int nP;//positive number
+                unsigned int sum;//positive number
+
+                //Input
+                cout<<"Input a positive integer value. ";
+                cin>>nP;
+
+                for(int n=1;n<=nP;n++)
+                    sum=sum+n;
+
+                cout<<"The sum of all the numbers from 1 up to "<<nP<<" is "<<sum<<endl;
                     break;
                 }
                 case 7:{
