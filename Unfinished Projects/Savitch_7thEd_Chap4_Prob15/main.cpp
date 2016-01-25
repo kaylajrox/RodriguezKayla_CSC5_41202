@@ -1,4 +1,4 @@
-
+  
 /* 
     File:   main.cpp
     Author: Kayla Rodriguez
@@ -32,33 +32,22 @@ int main(int argc, char** argv)
     //Introduction
     cout<<"It costs $3.50 to buy a deep fried twinkie. "<<endl;
     //Input
+    cout<<fixed<<setprecision(2);
     cout<<"Please enter coins/ dollars into the machine. "<<endl;
     cin>>coin;
-    if (!(coin==5.00||coin==1.00||coin==0.50||coin==0.25||coin==0.10||coin==0.05||coin==0.01)){
-        cout<<"Not a valid money input. Please insert something else. "<<endl;
+    if (!(coin==5.00||coin==1.00||coin==0.50||coin==0.25||coin==0.10||coin==0.05)){
+       cout<<"Not a valid money input. Please insert something else. "<<endl;
     }else if (coin>3.50f){
-        cout<<"Enjoy your fried twinkie! "<<endl;
-        cout<<"Your change is "<<"$"<<(5.00f-3.50f)<<endl;
-    }else 
-    {
-        cout<<"Please insert another coin/ dollar. ";
-        cin>>coin1;
-        if (!(coin1==5.00||coin1==1.00||coin1==0.50||coin1==0.25||coin1==0.10||coin1==0.05||coin1==0.01))
-        {
-            cout<<"Not a valid money input. Please insert something else. "<<endl; 
-        }else 
-        {
-           total=coin+coin1; 
-           if (total>=3.50f)
-           {
-               cout<<"Enjoy your fried twinkie! "<<endl;
-               cout<<"Your change is "<<"$"<<(total-3.50f)<<endl;    
-           }else 
-               cout<<"repeat";
-        }   
-    
-
+        cout<<"Enjoy your deep fried twinkie! ";
+        cout<<"Your change is $"<<(5.00f-3.50f)<<endl;
     }
+    else{
+       do{
+           cout<<"Please enter another coin/dollar. "<<endl;
+           cin>>coin1;
+           total=coin1+coin;
+       } while (!((coin1+coin)==3.50));
+    }       
     
     return 0;
 }
