@@ -34,10 +34,10 @@ int main(int argc, char** argv) {
             cout<<"Type 4 to Display Savitch 7thEd Chap4 Prob1 "<<endl;
             cout<<"Type 5 to Display Savitch 7thEd Chap4 Prob2 "<<endl;
             cout<<"Type 6 to Display Gaddis 8thEd Chap5 Prob1 "<<endl;
-            cout<<"Type 7 to Display Savitch 7thEd Chap3 Prob1 "<<endl;
-            cout<<"Type 8 to Display Savitch 7thEd Chap3 Prob5 "<<endl;
-            cout<<"Type 9 to Display Savitch 9thEd Chap3 Prob3 "<<endl;
-            cout<<"Type 10 to Display Gaddis 8thEd Chap4 Prob8"<<endl;
+            cout<<"Type 7 to Display Gaddis 8thEd Chap5 Prob3 "<<endl;
+            cout<<"Type 8 to Display Gaddis 8thEd Chap5 Prob6 "<<endl;
+            cout<<"Type 9 to Display Gaddis 8thEd Chap5 Prob11 "<<endl;
+            cout<<"Type 10 to Display Gaddis 8thEd Chap5 Prob4"<<endl;
             cout<<"Type anything else to exit "<<endl;
             cin>>nSoltn;
             //Solutions to all the problems
@@ -63,7 +63,7 @@ int main(int argc, char** argv) {
                     break;
                 }
                 case 2:{
-                   //The problem to solve
+                //The problem to solve
                 cout<<endl<<"Solution to Gaddis 8thEd Chap5 Prob7"<<endl;
                 cout<<endl<<"Display a Salary Table"<<endl<<endl;
 
@@ -108,7 +108,7 @@ int main(int argc, char** argv) {
                         //Output
                         cout<<"The gravitational force between these two objects in dynes ((g x cm)/sec^2) is ";
                         cout<<f<<endl;
-
+                        //Repeat?
                         cout<<"Would you like to repeat the program? "<<endl;
                         cout<<"y=yes anything else to exit"<<endl;
                         cin>>choice;
@@ -126,7 +126,7 @@ int main(int argc, char** argv) {
                     //Declare variables
                     float nLit; //number of liters
                     float nMiles;//number of miles traveled
-                    char choice;
+                    char choice; //choice to repeat
                     do 
                     {
                         //Input
@@ -223,50 +223,140 @@ int main(int argc, char** argv) {
                     break;
                 }
                 case 6:{
-                   //The problem to solve
+                //The problem to solve
                 cout<<endl<<"Solution to Gaddis 8thEd Chap5 Prob1"<<endl;
-                cout<<endl<<"Positive Integers"<<endl<<endl;
+                cout<<endl<<"Positive Integer Sums"<<endl<<endl;
 
                 //Declare variables
-                unsigned int nP;//positive number
-                unsigned int sum;//positive number
+                unsigned int nP;   //positive number
+                unsigned int sum=0;//positive sum
 
                 //Input
                 cout<<"Input a positive integer value. ";
                 cin>>nP;
 
-                for(int n=1;n<=nP;n++)
+                for(int n=0;n<=nP;n++)
                     sum=sum+n;
 
                 cout<<"The sum of all the numbers from 1 up to "<<nP<<" is "<<sum<<endl;
                     break;
                 }
                 case 7:{
-                    //The Problem to solve
-                    cout<<endl<<"Solution to Savitch 7thEd Chap3 Prob1"<<endl;
-                    cout<<endl<<"Rock-Paper-Scissors Games"<<endl<<endl;
+                //The problem to solve
+                cout<<endl<<"Solution to Gaddis 8thEd Chap5 Prob3"<<endl;
+                cout<<endl<<"Display Ocean Level Rising Table"<<endl<<endl;
 
-                   
+                //Declare variables
+                unsigned int year;
+                float INCRMNT=1.5;
+                float mmrise;
+
+                //Set Precision
+                cout<<fixed<<setprecision(2)<<showpoint;
+                //Loop to generate the degree Celsius and output the table
+                cout<<"This program gives a chart for the millimeters the ocean would have risen,"<<endl;
+                cout<<"assuming it is currently rising at 1.5 mm per year."<<endl;
+                cout<<"Year\tNumber of Millimeters Risen "<<endl;
+
+                for(int year=0;year<=25;year+=INCRMNT)
+                    {
+                    //Calculate
+                    float mmrise=year*1.5f;
+
+                    //Display
+                    cout<<year<<"\t"<<mmrise<<endl;
+                    }
                     break;
                 }
                 case 8:{
-                    cout<<endl<<"Solution to Savitch 7thEd Chap3 Prob5 "<<endl;
-                    cout<<"Call Rates"<<endl<<endl;
+                     //The problem to solve
+                    cout<<endl<<"Solution to Gaddis 8thEd Chap5 Prob6"<<endl;
+                    cout<<endl<<"Distance Traveled"<<endl<<endl;
 
+                    //Declare variables
+                    float speed;       //speed of the vehicle
+                    float distnce;     //distance traveled
+                    unsigned int hrs2; //hours the car traveled
+
+                    //Input
+                    cout<<"What is the speed of the vehicle in miles per hour? ";
+                    cin>>speed;   
+                    cout<<"How many hours has it traveled? ";
+                    cin>>hrs2;
+
+                    //Loop to generate distance for each hour
+                    cout<<"Hour\tDistance Traveled"<<endl;
+                    cout<<"------------------------"<<endl;
+                    for(int hrs=1;hrs<=hrs2;hrs++)
+                        {
+                        //Calculate
+                        float distnce=speed*hrs;
+
+                        //Display
+                        cout<<hrs<<"\t"<<distnce<<endl;
+                        } 
                     break;
                 }
                 case 9:{
-                //The problem to solve
-                cout<<endl<<"Solution to Savitch 9thEd Chap3 Prob3"<<endl;
-                cout<<endl<<"The Roman Numeral Conversion Program"<<endl<<endl;
+                    //The problem to solve
+                cout<<endl<<"Solution to Gaddis 8thEd Chap5 Prob11"<<endl;
+                cout<<endl<<"Population Sizes"<<endl<<endl;
 
-               
+                //Declare variables
+                unsigned int nOrg;    //starting number or organisms
+                float percGro;        //average percent increase of organisms
+                unsigned int nDays1;  //number of days organisms allowed to grow
+                unsigned int popSize; //population size after number of days
+
+
+                //Input
+                cout<<"What is the starting number of organisms?"<<endl;
+                cin>>nOrg;
+                if (nOrg==1){
+                    cout<<"Population must be greater than or equal to two. "<<endl;
+                }else {
+                    cout<<"What is their average population increase (in percentage)? "<<endl;
+                    cin>>percGro;
+                    cout<<"What is the number of days they will multiply?"<<endl;
+                    cin>>nDays1;
+
+                    //Loop to generate the population for each new day
+                    cout<<"Day   Population Size"<<endl;
+                    for(int nDays=1;nDays<=nDays1;nDays++)
+                        {
+                        //Calculate
+                        unsigned int popSize=(nOrg+(percGro*nOrg/100))*nDays;
+
+                        //Display
+                        cout<<nDays<<"\t"<<popSize<<endl;
+                        } 
+                }
                     break;
                 }
                 case 10:{
-                    cout<<endl<<"Solution to Gaddis 8thEd Chap4 Prob8"<<endl;
-                    cout<<endl<<"Mixing Primary Colors!"<<endl<<endl;
-                   
+                       //The problem to solve
+                cout<<endl<<"Solution to Gaddis 8thEd Chap5 Prob4"<<endl;
+                cout<<endl<<"Calories Burned"<<endl<<endl;
+
+                //Declare variables
+                float calbrnd; //calories burned
+
+                //Set precision
+                cout<<fixed<<setprecision(1)<<showpoint;
+                //Introduction
+                cout<<"When you run on the treadmill, you burn 3.6 calories per minute."<<endl;
+                cout<<"This is a table that displays number of calories burned in 5 minute increments."<<endl;
+                //Loop to generate the population for each new day
+                cout<<"Minutes\tCalories Burned"<<endl;
+                for(int min=0;min<=30;min+=5)
+                    {
+                    //Calculate
+                    float calbrnd=3.6*min;
+
+                    //Display
+                    cout<<min<<"\t"<<calbrnd<<endl;
+                    }
+
                 break;
                 }
                 default:{
