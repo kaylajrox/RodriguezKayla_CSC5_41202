@@ -313,7 +313,8 @@ int main(int argc, char** argv) {
                 cout<<"What is the starting number of organisms?"<<endl;
                 cin>>nOrg;
                 if (nOrg==1){
-                    cout<<"Population must be greater than or equal to two. "<<endl;
+                    cout<<"Population must be greater than or equal to two. Cannot produce table,"<<endl;
+                    cout<<"rerun program."<<endl;
                 }else {
                     cout<<"What is their average population increase (in percentage)? "<<endl;
                     cin>>percGro;
