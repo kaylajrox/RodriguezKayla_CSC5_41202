@@ -1,0 +1,14 @@
+Things you need in the Game:
+char
+int
+bool
+float
+ternary operator - single if else(just one if and else)
+formatting
+if
+if-else
+switch
+whole
+do
+for 
+file
