@@ -1,14 +1,14 @@
 Things you need in the Game:
-char
-int
-bool
+char X
+int X
+bool X
 float
 ternary operator - single if else(just one if and else)
 formatting
 if
-if-else
-switch
-whole
-do
-for 
-file
+if-else X
+switch X
+whole X
+do X
+for X
+file X
