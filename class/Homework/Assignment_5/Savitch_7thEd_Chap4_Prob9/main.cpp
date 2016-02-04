@@ -71,7 +71,7 @@ void jsize(float height, float weight, unsigned int age){
 }
 //000000001111111112222222222333333333344444444445555555555666666666677777777778
 //345678901234567890123456789012345678901234567890123456789012345678901234567890
-/*                       Jacket size calculation Function                     */
+/*                       Waist size calculation Function                      */
 /******************************************************************************/
 void waisiz(float weight, unsigned int age){
     float waisiz=weight/5.7f;

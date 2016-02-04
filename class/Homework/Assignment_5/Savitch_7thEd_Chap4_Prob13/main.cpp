@@ -25,7 +25,7 @@ cout<<endl<<"The Roman Numeral Conversion Program"<<endl<<endl;
     
 //Declare and initialize variables
 unsigned int n10s,n1s;//Number of 10^x's
-int number;           //Arabic number, regular year
+int number;           //number for input in between [0,99]
 //Input
 do{
 cout<<"Input a number between 0-99 to see the lyrics of 'Ninety-Nine Bottles of";
