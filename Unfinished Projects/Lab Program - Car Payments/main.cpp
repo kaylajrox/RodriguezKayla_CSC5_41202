@@ -2,6 +2,7 @@
  * Author: Kayla Rodriguez
  * Created on January 5, 2016, 9:20 PM
  * Purpose: Car Payments
+   car payments Fix using math library pow
  */
  
 //System Libraries
