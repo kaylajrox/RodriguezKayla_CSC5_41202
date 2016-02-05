@@ -2,7 +2,7 @@
     File:   main.cpp
     Author: Kayla Rodriguez
     Created on February 3, 2016, 8:35 PM
-    Purpose:  Menu
+    Purpose:  Assignment 5 Problem Set
  */
 
 //System Libraries
@@ -85,7 +85,7 @@ void problem1(){
         cin>>pitemN;
 
         //Output the results
-        cout<<fixed<<setprecision(2);
+        cout<<fixed<<setprecision(1);
         infrate(pitemO,pitemN);
 
     //Repeat program?
@@ -99,7 +99,8 @@ void problem1(){
 //345678901234567890123456789012345678901234567890123456789012345678901234567890
 /*                        Inflation Rate Calculation Function                 */
 /******************************************************************************/
-void infrate(float pitemO, float pitemN){ 
+void infrate(float pitemO, float pitemN){
+    cout<<fixed<<setprecision(1);
     float infrate=((pitemN-pitemO)/pitemO)*CNVPERC;
     cout<<"The estimated inflation rate is "<<infrate<<"%"<<endl;
 }
@@ -114,6 +115,7 @@ void problem2(){
     //Declare and initialize variables
     float pitemO;
     float pitemN;
+    float pitemN2;
     char choice;
     do {
         //Input data
@@ -123,7 +125,6 @@ void problem2(){
         cin>>pitemN;
 
         //Output the results
-        cout<<fixed<<setprecision(2);
         infrate(pitemO,pitemN);
         infratP(pitemO,pitemN);
 
@@ -137,9 +138,12 @@ void problem2(){
 //345678901234567890123456789012345678901234567890123456789012345678901234567890
 /*                   Inflation Rate Calculation Prediction Function           */
 /******************************************************************************/
-void infratP(float pitemO, float pitemN){ 
+void infratP(float pitemO, float pitemN){
+    cout<<fixed<<setprecision(2);
     float pricN=((pitemN-pitemO)/pitemO)*pitemN+pitemN;
     cout<<"The estimated price one year from now is "<<pricN<<endl;
+    float pricN2=((pitemN-pitemO)/pitemO)*pricN+pricN;
+    cout<<"The estimated price two years from now is "<<pricN2<<endl;
 }
 /******************************************************************************/
 /************************** Problem 3 *****************************************/
