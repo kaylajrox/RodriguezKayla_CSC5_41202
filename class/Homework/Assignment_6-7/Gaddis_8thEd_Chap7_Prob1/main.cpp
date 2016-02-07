@@ -49,8 +49,8 @@ void PrtAry(int number[],int SIZE){
     cout<<"The largest value is: "<<highest<<endl;
     lowest = number[0];
     for (count = 1; count < SIZE; count++){
-        if (number[count] > highest){
-            highest = number[count];
+        if (number[count] < lowest){
+            lowest = number[count];
         }
      } 
     cout<<"The smallest value is: "<<lowest<<endl;
