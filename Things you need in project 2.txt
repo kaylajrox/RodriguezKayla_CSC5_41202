@@ -1,0 +1,12 @@
+Project 2 Checklist:
+functions
+-pass by value
+-pass by reference 
+-defaulted parameters
+-returning primitive data types
+-outputted to file
+arrays
+-sorting game/searching required
+pointers
+
+
