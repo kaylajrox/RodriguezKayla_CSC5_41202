@@ -1,0 +1,5 @@
+The computers colors are G N B O
+Your colors are G N B O
+Your total number of tries is 2
+You win!
+The percentage of the board you got through is 20.0% 

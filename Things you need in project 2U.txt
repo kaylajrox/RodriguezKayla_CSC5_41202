@@ -1,0 +1,32 @@
+Project 2 Checklist:				   Status
+functions
+-pass by value
+-pass by reference 
+-defaulted parameters
+-returning primitive data types
+-outputted to file 				? (not working)
+arrays
+-pararell arrays
+-sorting game/searching required
+pointers
+
+
+In Writeup
+Big table					
+from each chapter what we learned and where   Add to current Writeup
+to find it in your code
+(check writeup examples for project 1)
+
+Final:
+1.int-->unsigned int eqivalent
+2.did this in class 1-1000 guess
+-how many guesses it takes to guess it
+3.vectors
+4. sorting names, sort all the characters 
+not just the first value
+
+
+EXTRA CREDIT-Sorting problem
+none acceptable characters
+Ideas
+Possible selection sort function
