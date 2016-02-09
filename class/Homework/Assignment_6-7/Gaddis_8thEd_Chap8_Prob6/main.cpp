@@ -30,14 +30,14 @@ int main(int argc, char** argv) {
     "Pike, Gordon","Holland, Beth" };
     
     //Display the values
-    cout<<"The unsorted values are\n";
+    cout<<"The unsorted values are: "<<endl;
     shArray(names,NAMES);
     
     //Sort the values
     selectS(names,NAMES);
     
     //Display the values again
-    cout<<"The sorted values are\n";
+    cout<<"The sorted values are: "<<endl;
     shArray(names,NAMES);
 
     //Exit stage right
@@ -50,19 +50,22 @@ int main(int argc, char** argv) {
 //******************************************************************************
 void selectS(string names[],int NAMES){
     //Declare Variables
-    int strScan, mini, minval;
+    int strScan, mini; 
+    string minval;
     for (strScan=0;strScan < (NAMES-1); strScan++){
         mini=strScan;
-        minval = names[strScan];
+        minval = names[mini];
         for (int i=strScan+1;i<NAMES;i++){
             if (names[i]<minval){
                 minval=names[i];
                 mini=i;
             }
         }
-        names[mini]=names[strScan];
+        string temp=names[strScan];
         names[strScan]=minval;
+        names[mini]=temp;
     }
+    cout<<endl;
 }
 //******************************************************************************
 //Definition of function show Array
