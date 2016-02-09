@@ -70,7 +70,8 @@ void selectS(string names[],int NAMES){
         string temp=names[strScan];
         names[strScan]=minval;
         names[mini]=temp;
-    }
+    }/
+
     cout<<endl;
 }
 //******************************************************************************

@@ -3,7 +3,7 @@
     Author: kayla rodriguez
     Created on February 2nd, 2016, 8:20 AM
     Purpose: lottery modification
- * Gaddis_8thEd_Chap8_Prob3
+ * Gaddis 8thEd Chap8 Prob3
  */
 
 //System Libraries
