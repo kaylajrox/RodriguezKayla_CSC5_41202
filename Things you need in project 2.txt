@@ -31,7 +31,7 @@ none acceptable characters
 Ideas
 Possible selection sort function
 
-Questions:
+Questions/Concerns:
 2D array for table?
 Fix check Function. I need it to repeat only if false, not working right
 toupper used in search?-->verify if you need another options array
