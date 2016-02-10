@@ -13,7 +13,7 @@ pointers
 
 In Writeup
 Big table					
-from each chapter what we learned and where   Add to current Writeup
+from each chapter what we learned and where     Add to current Writeup
 to find it in your code
 (check writeup examples for project 1)
 
@@ -32,6 +32,7 @@ Ideas
 Possible selection sort function
 
 Questions/Concerns:
-2D array for table?
-Fix check Function. I need it to repeat only if false, not working right
-toupper used in search?-->verify if you need another options array
+1.2D array for table?
+2.Fix check Function. I need it to repeat only if false, not working right
+3.toupper used in search?-->verify if you need another options array
+4.vector syntax-->fix/finished
